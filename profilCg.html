@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catalyst Gaming – Laptop Gaming Futuristik</title>
+  <style>
+    /* ====== FONT ====== */
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600&display=swap');
+
+    /* ====== RESET ====== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Rajdhani', sans-serif;
+      background-color: #0a0a0a;
+      color: #fff;
+      overflow-x: hidden;
+      background-image: 
+        radial-gradient(circle at center, rgba(255,0,0,0.15) 0%, transparent 70%),
+        repeating-linear-gradient(60deg, #1a0000 0px, #1a0000 10px, #0a0a0a 10px, #0a0a0a 20px);
+    }
+
+    /* ====== HEX BACKGROUND ====== */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: 
+        radial-gradient(circle, rgba(255, 0, 0, 0.2) 1px, transparent 1px);
+      background-size: 40px 40px;
+      mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0.7));
+      z-index: -1;
+    }
+
+    /* ====== NAVBAR ====== */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      background: rgba(15, 0, 0, 0.8);
+      border-bottom: 1px solid rgba(255, 0, 0, 0.4);
+      backdrop-filter: blur(8px);
+    }
+
+    nav .logo {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #ff1b1b;
+      text-shadow: 0 0 15px #ff1b1b;
+      letter-spacing: 2px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+      letter-spacing: 1px;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #ff1b1b;
+      text-shadow: 0 0 10px #ff1b1b;
+    }
+
+    /* ====== HERO ====== */
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 80px 100px;
+      min-height: 90vh;
+    }
+
+    .hero-text {
+      max-width: 50%;
+    }
+
+    .hero-text h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 3rem;
+      color: #fff;
+      line-height: 1.2;
+    }
+
+    .hero-text h1 span {
+      color: #ff1b1b;
+      text-shadow: 0 0 20px #ff1b1b;
+    }
+
+    .hero-text p {
+      margin-top: 20px;
+      color: #aaa;
+      font-size: 1.2rem;
+      max-width: 90%;
+    }
+
+    .btn-buy {
+      display: inline-block;
+      margin-top: 35px;
+      padding: 15px 40px;
+      background: #ff1b1b;
+      color: #fff;
+      font-weight: bold;
+      border: none;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.3s;
+      box-shadow: 0 0 20px rgba(255,0,0,0.5);
+    }
+
+    .btn-buy:hover {
+      background: #ff3c3c;
+      box-shadow: 0 0 30px rgba(255,0,0,0.9);
+      transform: scale(1.05);
+    }
+
+    .hero img {
+      width: 540px;
+      border-radius: 20px;
+      filter: drop-shadow(0 0 30px #ff1b1b);
+      transition: 0.5s;
+    }
+
+    .hero img:hover {
+      transform: scale(1.05) rotateY(5deg);
+      filter: drop-shadow(0 0 45px #ff1b1b);
+    }
+
+    /* ====== ABOUT COMPANY ====== */
+    .about {
+      text-align: center;
+      padding: 80px 60px;
+      background: rgba(15, 0, 0, 0.85);
+      border-top: 1px solid rgba(255,0,0,0.3);
+      border-bottom: 1px solid rgba(255,0,0,0.3);
+    }
+
+    .about h2 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2.5rem;
+      color: #ff1b1b;
+      text-shadow: 0 0 15px #ff1b1b;
+      margin-bottom: 20px;
+    }
+
+    .about p {
+      font-size: 1.1rem;
+      color: #bbb;
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    /* ====== FEATURES ====== */
+    .features {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 40px;
+      padding: 60px;
+      /* background: rgba(10, 0, 0, 0.85); */
+      background: rgba(63, 63, 63, 0.8);
+    }
+
+    .feature {
+      text-align: center;
+      max-width: 220px;
+      transition: 0.3s;
+    }
+
+    .feature img {
+      width: 80px;
+      filter: brightness(1.2);
+      margin-bottom: 10px;
+      transition: 0.3s;
+    }
+
+    .feature:hover img {
+      filter: drop-shadow(0 0 15px #ff1b1b);
+      transform: scale(1.1);
+    }
+
+    .feature:hover {
+      transform: translateY(-10px);
+      color: #ff1b1b;
+    }
+
+    /* ====== FOOTER ====== */
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: rgba(15, 0, 0, 0.8);
+      border-top: 1px solid rgba(255, 0, 0, 0.4);
+      color: #777;
+      font-size: 0.9rem;
+    }
+
+  </style>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav>
+    <div class="logo">CATALYST GAMING</div>
+    <ul>
+      <li><a href="#">Beranda</a></li>
+      <li><a href="#">Tentang</a></li>
+      <li><a href="#">Produk</a></li>
+      <li><a href="#">Kontak</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Menghadirkan Era Baru<br><span>Laptop Gaming Modern</span></h1>
+      <p>
+        Catalyst Gaming adalah perusahaan teknologi yang berfokus pada inovasi laptop gaming berperforma tinggi dengan desain futuristik. 
+        Kami berkolaborasi dengan Intel, AMD, NVIDIA, AORUS, Samsung, ROG, COOLER MASTER, dan KINGSTON untuk menghadirkan kekuatan tanpa batas bagi para gamer sejati.
+      </p>
+      <button class="btn-buy">Pre-Order</button>
+    </div>
+    <img src="img/Gemini_Generated_Image_hzmrwmhzmrwmhzmr.png" alt="Laptop Gaming Catalyst">
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about">
+    <h2>Tentang Catalyst Gaming</h2>
+    <p>
+      Didirikan dengan semangat inovasi dan performa, Catalyst Gaming berkomitmen menghadirkan perangkat gaming yang bukan hanya kuat, tetapi juga elegan dan futuristik.
+      Dengan desain geometris yang menawan dan pencahayaan merah neon yang ikonik, setiap produk kami adalah perpaduan antara kekuatan, kecepatan, dan gaya.
+      Kami percaya bahwa setiap gamer pantas mendapatkan pengalaman terbaik tanpa kompromi.
+    </p>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features">
+    <div class="feature">
+      <img src="img/intel-logo-D44528TS_brandlogos.net.svg" alt="Intel">
+      <p>Dukungan Intel</p>
+    </div>
+    <div class="feature">
+      <img src="img/amd-logo-brandlogos.net_2fkclc1l7.svg" alt="AMD">
+      <p>Dukungan AMD</p>
+    </div>
+    <div class="feature">
+      <img src="https://upload.wikimedia.org/wikipedia/sco/2/21/Nvidia_logo.svg" alt="NVIDIA">
+      <p>Dukungan Nvidia</p>
+    </div>
+    <div class="feature">
+      <img src="img/aorus-logo-brandlogos.net_0vrmezwu9.svg" alt="Aorus">
+      <p>Dukungan Aorus</p>
+    </div>
+    <div class="feature">
+      <img src="img/ROG-OeZ04Dt3w_brandlogos.net.svg" alt="ROG">
+      <p>Dukungan ROG</p>
+    </div>
+    <div class="feature">
+      <img src="img/Scarica Samsung logo png, Samsung icona trasparente png.jpg" alt="SAMSUNG">
+      <p>Dukungan Samsung</p>
+    </div>
+    <div class="feature">
+      <img src="img/Cooler Master.jpg" alt="COOLER MASTER">
+      <p>Dukungan Cooler Master</p>
+    </div>
+    <div class="feature">
+      <img src="img/download (3).jpg" alt="KINGSTON">
+      <p>Dukungan Kingston</p>
+    </div>
+    <div class="feature">
+      <img src="img/AMD Ryzen Radeon.png" alt="AMD RADEON">
+      <p>Dukungan Amd RADEON</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2025 Catalyst Gaming. Powered by Intel • AMD • NVIDIA • ROG • AORUS • Samsung • COOLER MASTER • KINGSTON.
+  </footer>
+</body>
+</html>
