@@ -1,2 +1,0 @@
-# Catalyst-gaming
-Website Rzky
